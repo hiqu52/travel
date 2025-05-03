@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Addiction Pakistan Tours - Explore Northern Areas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #1e6f5c;
+            /* Deep teal green */
+            --secondary-color: #289672;
+            /* Vibrant green */
+            --accent-color: #f7a440;
+            /* Warm orange */
+            --light-color: #f6f5f1;
+            /* Off-white */
+            --dark-color: #1a3c40;
+            /* Dark teal */
+            --text-color: #333;
+            /* Dark gray for text */
+            --text-light: #f8f9fa;
+            /* Light text */
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            overflow-x: hidden;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Header & Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background-color: rgba(246, 245, 241, 0.95);
+            /* Using light-color */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header.scrolled .navbar a {
+            color: var(--text-color);
+        }
+
+        header.scrolled .logo {
+            color: var(--primary-color);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--light-color);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--light-color);
+            position: absolute;
+            transition: var(--transition);
+        }
+
+        .hamburger span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hamburger span:nth-child(3) {
+            bottom: 0;
+        }
+
+        header.scrolled .hamburger span {
+            background-color: var(--text-color);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 50%;
+            height: 100vh;
+            background-color: rgba(30, 111, 92, 0.95);
+            /* primary-color with opacity */
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-links {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .mobile-links a {
+            color: var(--light-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .mobile-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-color);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .search-bar {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            animation: fadeInUp 1s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 20px 30px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-bar button:hover {
+            background-color: var(--secondary-color);
+        color: var(--light-color);
+        }
+
+        .slider-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            width: 400%;
+            height: 100%;
+            animation: slide 20s infinite;
+        }
+
+        .slide {
+            width: 25%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide:nth-child(1) {
+            background-image: url('https://images.unsplash.com/photo-1560787314-5fae89670fd5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+
+        .slide:nth-child(2) {
+            background-image: url('https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80');
+        }
+
+        .slide:nth-child(3) {
+            background-image: url('https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1458&q=80');
+        }
+
+        .slide:nth-child(4) {
+            background-image: url('https://images.unsplash.com/photo-1560857793-8e61cd35f221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+
+        /* Tours Section */
+        .tours {
+            background-color: var(--light-color);
+        }
+
+        .tours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .tour-card {
+            background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .tour-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .tour-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .tour-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .tour-card:hover .tour-img img {
+            transform: scale(1.1);
+        }
+
+        .tour-info {
+            padding: 25px;
+        }
+
+        .tour-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .tour-location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .tour-location i {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+
+        .tour-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .tour-details span {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .tour-details i {
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
+
+        .tour-price {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Recent Tours Section */
+        .recent-tours {
+            background-color: white;
+        }
+
+        .recent-tours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .recent-tour-card {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+       
+            transition: var(--transition);
+        }
+
+        .recent-tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .recent-tour-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .recent-tour-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .recent-tour-card:hover .recent-tour-img img {
+            transform: scale(1.05);
+        }
+
+        .recent-tour-date {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .recent-tour-info {
+            padding: 20px;
+        }
+
+        .recent-tour-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .recent-tour-location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .recent-tour-location i {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(0);
+            }
+
+            30% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-25%);
+            }
+
+            55% {
+                transform: translateX(-50%);
+            }
+
+            75% {
+                transform: translateX(-50%);
+            }
+
+            80% {
+                transform: translateX(-75%);
+            }
+
+            100% {
+                transform: translateX(-75%);
+            }
+        }
+
+        /* Search Results */
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+        }
+
+        .search-results.active {
+            display: block;
+        }
+
+        .search-result-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-result-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        .search-result-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .search-result-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .mobile-menu {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-bar input {
+                padding: 15px 20px;
+            }
+
+            .search-bar button {
+                padding: 10px 20px;
+            }
+
+            .tours-grid,
+            .recent-tours-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mobile-menu {
+                width: 80%;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navbar -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-mountain"></i>
+                    <span>Travel Addiction</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#recent-tours">Recent Tours</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="book.html">Book Online</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul class="mobile-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#recent-tours">Recent Tours</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="book.html">Book Online</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-overlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <h1>Explore Pakistan's Northern Areas</h1>
+            <p>Discover breathtaking landscapes, majestic mountains, and rich cultural heritage with our expertly
+                curated tours.</p>
+
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for destinations...">
+                <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+                <div class="search-results" id="search-results"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours" id="tours">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Tours</h2>
+                <p>Explore our most sought-after tours to Pakistan's stunning northern regions. Each tour is carefully
+                    designed to provide an unforgettable experience.</p>
+            </div>
+
+            <div class="tours-grid">
+                <!-- Tour 1 -->
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1560787314-5fae89670fd5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Hunza Valley Tour">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Hunza Valley Expedition</h3>
+                        <div class="tour-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Gilgit-Baltistan, Pakistan</span>
+                        </div>
+                        <div class="tour-details">
+                            <span><i class="fas fa-calendar-alt"></i> 7 Days</span>
+                            <span><i class="fas fa-users"></i> 12 People</span>
+                            <span><i class="fas fa-hiking"></i> Moderate</span>
+                        </div>
+                        <div class="tour-price">From $899</div>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
+                            alt="Skardu Adventure">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Skardu Adventure</h3>
+                        <div class="tour-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Skardu, Pakistan</span>
+                        </div>
+                        <div class="tour-details">
+                            <span><i class="fas fa-calendar-alt"></i> 5 Days</span>
+                            <span><i class="fas fa-users"></i> 10 People</span>
+                            <span><i class="fas fa-hiking"></i> Moderate</span>
+                        </div>
+                        <div class="tour-price">From $749</div>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 3 -->
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1458&q=80"
+                            alt="Fairy Meadows Trek">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Fairy Meadows Trek</h3>
+                        <div class="tour-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nanga Parbat, Pakistan</span>
+                        </div>
+                        <div class="tour-details">
+                            <span><i class="fas fa-calendar-alt"></i> 4 Days</span>
+                            <span><i class="fas fa-users"></i> 8 People</span>
+                            <span><i class="fas fa-hiking"></i> Challenging</span>
+                        </div>
+                        <div class="tour-price">From $599</div>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Tours Section -->
+    <section class="recent-tours" id="recent-tours">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recent Tours</h2>
+                <p>Check out our recently completed tours and get inspired for your next adventure in Pakistan's
+                    northern areas.</p>
+            </div>
+
+            <div class="recent-tours-grid">
+                <!-- Recent Tour 1 -->
+                <div class="recent-tour-card">
+                    <div class="recent-tour-img">
+                        <img src="https://images.unsplash.com/photo-1560857793-8e61cd35f221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Recent Tour to Swat Valley">
+                        <div class="recent-tour-date">June 2023</div>
+                    </div>
+                    <div class="recent-tour-info">
+                        <h3>Swat Valley Exploration</h3>
+                        <div class="recent-tour-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Swat Valley, KPK</span>
+                        </div>
+                        <p>Our group explored the stunning Swat Valley, visiting historical sites and enjoying the lush
+                            green landscapes.</p>
+                        <a href="#" class="btn">View Photos</a>
+                    </div>
+                </div>
+
+                <!-- Recent Tour 2 -->
+                <div class="recent-tour-card">
+                    <div class="recent-tour-img">
+                        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1464&q=80"
+                            alt="Recent Tour to Naran Kaghan">
+                        <div class="recent-tour-date">July 2023</div>
+                    </div>
+                    <div class="recent-tour-info">
+                        <h3>Naran Kaghan Adventure</h3>
+                        <div class="recent-tour-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kaghan Valley, KPK</span>
+                        </div>
+                        <p>An amazing journey through the picturesque Kaghan Valley with breathtaking views of lakes and
+                            mountains.</p>
+                        <a href="#" class="btn">View Photos</a>
+                    </div>
+                </div>
+
+                <!-- Recent Tour 3 -->
+                <div class="recent-tour-card">
+                    <div class="recent-tour-img">
+                        <img src="https://images.unsplash.com/photo-1560787314-5fae89670fd5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Recent Tour to Hunza">
+                        <div class="recent-tour-date">August 2023</div>
+                    </div>
+                    <div class="recent-tour-info">
+                        <h3>Hunza Autumn Tour</h3>
+                        <div class="recent-tour-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hunza Valley, GB</span>
+                        </div>
+                        <p>Experienced the golden autumn in Hunza with stunning views of Rakaposhi and Ultar peaks.</p>
+                        <a href="#" class="btn">View Photos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Travel Addiction</h3>
+                    <p>Your trusted partner for exploring Pakistan's breathtaking northern areas. We provide
+                        unforgettable travel experiences with safety and comfort.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tours">Tours</a></li>
+                        <li><a href="#recent-tours">Recent Tours</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Popular Tours</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Hunza Valley Expedition</a></li>
+                        <li><a href="#">Skardu Adventure</a></li>
+                        <li><a href="#">Fairy Meadows Trek</a></li>
+                        <li><a href="#">Naran Kaghan Tour</a></li>
+                        <li><a href="#">Swat Valley Exploration</a></li>
+                        <li><a href="#">Deosai Plains Safari</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Islamabad, Pakistan</p>
+                        <p><i class="fas fa-phone-alt"></i> +92 300 1234567</p>
+                        <p><i class="fas fa-envelope"></i> info@traveladdiction.pk</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Travel Addiction Pakistan Tours. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-links a');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        menuOverlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const searchResults = document.getElementById('search-results');
+
+        // Northern Areas data for search
+        const northernAreas = [
+            {
+                name: "Hunza Valley",
+                description: "Famous for its breathtaking landscapes, ancient forts, and hospitable people.",
+                image: "https://images.unsplash.com/photo-1560787314-5fae89670fd5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+            },
+            {
+                name: "Skardu",
+                description: "Gateway to the world's highest peaks including K2 and the stunning Shangrila Resort.",
+                image: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
+            },
+            {
+                name: "Fairy Meadows",
+                description: "Grassy plateau near Nanga Parbat base camp with spectacular mountain views.",
+                image: "https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1458&q=80"
+            },
+            {
+                name: "Naran Kaghan",
+                description: "Popular tourist destination known for its lakes, waterfalls and scenic beauty.",
+                image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1464&q=80"
+            },
+            {
+                name: "Swat Valley",
+                description: "Known as the 'Switzerland of Pakistan' with lush green valleys and historical sites.",
+                image: "https://images.unsplash.com/photo-1560857793-8e61cd35f221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+            },
+            {
+                name: "Deosai Plains",
+                description: "Second highest plateau in the world at 4,114 meters, known as the 'Land of Giants'.",
+                image: "https://images.unsplash.com/photo-1560787314-5fae89670fd5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+            },
+            {
+                name: "Shogran",
+                description: "Hill station offering panoramic views of Makra Peak and lush green meadows.",
+                image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1464&q=80"
+            },
+            {
+                name: "Kalash Valley",
+                description: "Home to the unique Kalash people with distinct culture and colorful festivals.",
+                image: "https://images.unsplash.com/photo-1560857793-8e61cd35f221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+            }
+        ];
+
+        // Search functionality
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            if (searchTerm.length > 2) {
+                const results = northernAreas.filter(area =>
+                    area.name.toLowerCase().includes(searchTerm) ||
+                    area.description.toLowerCase().includes(searchTerm)
+                );
+
+                displayResults(results);
+            } else {
+                searchResults.innerHTML = '';
+                searchResults.classList.remove('active');
+            }
+        });
+
+        searchBtn.addEventListener('click', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            if (searchTerm.length > 0) {
+                const results = northernAreas.filter(area =>
+                    area.name.toLowerCase().includes(searchTerm) ||
+                    area.description.toLowerCase().includes(searchTerm)
+                );
+
+                displayResults(results);
+            }
+        });
+
+        function displayResults(results) {
+            searchResults.innerHTML = '';
+
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.classList.add('search-result-item');
+                    resultItem.innerHTML = `
+                        <h4>${result.name}</h4>
+                        <p>${result.description}</p>
+                    `;
+                    resultItem.addEventListener('click', () => {
+                        window.location.href = `#${result.name.toLowerCase().replace(' ', '-')}`;
+                        searchResults.classList.remove('active');
+                    });
+                    searchResults.appendChild(resultItem);
+                });
+
+                searchResults.classList.add('active');
+            } else {
+                const noResults = document.createElement('div');
+                noResults.classList.add('search-result-item');
+                noResults.textContent = 'No results found';
+                searchResults.appendChild(noResults);
+                searchResults.classList.add('active');
+            }
+        }
+
+        // Close search results when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchResults.contains(e.target) && e.target !== searchInput && e.target !== searchBtn) {
+                searchResults.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.tour-card, .recent-tour-card, .section-title');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementPosition < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.tour-card, .recent-tour-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        document.querySelector('.section-title').style.opacity = '0';
+        document.querySelector('.section-title').style.transform = 'translateY(30px)';
+        document.querySelector('.section-title').style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+
+</html>
